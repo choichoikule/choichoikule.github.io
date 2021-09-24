@@ -8,6 +8,46 @@ path: "/blog/post-6"
 이더리움 재단에서 작성한 [NFT 만들기 포스팅](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/)를 읽으면서 작성한 글이다.
 작성중
 
+MyNFT.sol
+
+```javascript
+//Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// 우리의 nft 스마트 컨트랙트가가 상속받을 ERC721 표준 이 표준을 따라야 valid 하기때문에
+import "@openzeppelin/contracts/utils/Counters.sol";
+// 우리가 제작한 nft의 토탈갯수를 세고 번호를 매김
+import "@openzeppelin/contracts/access/Ownable.sol";
+// 스마트 컨트랙트를 소유한 나만이 nft를 주조할 수 있다.
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+
+contract MyNFT is ERC721URIStorage, Ownable {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    constructor() ERC721("CryptoGradient", "gradient") {}
+
+    function mintNFT(address recipient, string memory tokenURI)
+        public onlyOwner
+        returns (uint256)
+    {
+        _tokenIds.increment();
+
+        uint256 newItemId = _tokenIds.current();
+        _mint(recipient, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
+}
+
+//recipient 는 새롭게 만든 nft를 받을 주소
+//tokenURI는 nft의 메타데이러를 묘사하는 제이슨 문서로 변환가능한 스트링
+
+```
+
 alchemy는 블록체인 개발자 플랫폼이자 API이다. 우리의 노드가 이더리움 체인과 소통할 수 있게 해준다. 무료계정을 만든다.
 롭슨 테스트넷에서 앱을 만든다.
 그리고 메타마스크로 지갑을 생성한다.
