@@ -29,9 +29,9 @@ Array는 length 속성을 가지고 있는데 배열의 길이를 반환하고 �
 ```javascript
 > const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];
 > console.log(clothing.length);
-> <span style="color:gray">// expected output: 4</span>
+>  // expected output: 4
 > console.log(clothing.indexOf('sweaters'));
-> <span style="color:gray">// expected output: 3</span>
+>  // expected output: 3
 ```
 
 사실 @@unscopables속성도 가지고 있는데 with랑 같이 쓰이는 이 속성의 경우 with는 있어도 없는듯 살라는 명령어 중 하나이므로 이해를 과감히 포기하겠다ㅋㅋ
@@ -61,18 +61,18 @@ Array는 length 속성을 가지고 있는데 배열의 길이를 반환하고 �
 
 ```javascript
 > Array.from('foo');
-> <span style="color:gray">// ["f", "o", "o"]</span>
+>  // ["f", "o", "o"]
 > const mapper = new Map([['1', 'a'], ['2', 'b']]);
 > Array.from(mapper.values());
-> <span style="color:gray">// ['a', 'b'];</span>
+>  // ['a', 'b'];
 > Array.from([1, 2, 3], x => x + x);
-> <span style="color:gray">// [2, 4, 6]</span>
+>  // [2, 4, 6]
 > Array.from({length: 5}, (v, i) => i);
-> <span style="color:gray">// [0, 1, 2, 3, 4]</span>
+>  // [0, 1, 2, 3, 4]
 > const range = (start, stop, step) =>
 > Array.from({ length: (stop - start) / step + 1}, (\_, i) => start + (i \* step));
 > range(0, 4, 1);
-> <span style="color:gray">// [0, 1, 2, 3, 4] </span>
+>  // [0, 1, 2, 3, 4]
 ```
 
 ---
@@ -96,13 +96,13 @@ Array.of()와 Array 생성자의 차이는 정수형 인자의 처리 방법에 
 
 ```javascript
 > Array.of(7);
-> <span style="color:gray">// [7] </span>
+>  // [7]
 > Array.of(1, 2, 3);
-> <span style="color:gray">// [1, 2, 3]</span>
+>  // [1, 2, 3]
 > Array(7);
-> <span style="color:gray">// [ , , , , , , ]</span>
+>  // [ , , , , , , ]
 > Array(1, 2, 3);
-> <span style="color:gray">// [1, 2, 3]</span>
+>  // [1, 2, 3]
 ```
 
 ---
@@ -123,9 +123,9 @@ Array.of()와 Array 생성자의 차이는 정수형 인자의 처리 방법에 
 > const array2 = ['d', 'e', 'f'];
 > const array3 = array1.concat(array2);
 > console.log(array3);
-> <span style="color:gray">// expected output: Array ["a", "b", "c", "d", "e", "f"]</span>
+>  // expected output: Array ["a", "b", "c", "d", "e", "f"]
 > console.log(array1.concat(1, [2, 3]));
-> <span style="color:gray">// ['a', 'b', 'c', 1, 2, 3]</span>
+>  // ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ---
@@ -145,8 +145,9 @@ Array.of()와 Array 생성자의 차이는 정수형 인자의 처리 방법에 
 
 ```javascript
 > [1, 2, 3, 4, 5].copyWithin(0, 2, 4);
-> <span style="color:gray">// [3, 4, 3, 4, 5]</span> > [1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
-> <span style="color:gray">// [1, 2, 3, 3, 4]</span>
+>  // [3, 4, 3, 4, 5]
+> [1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
+>  // [1, 2, 3, 3, 4]
 ```
 
 ---
@@ -171,21 +172,21 @@ Array.of()와 Array 생성자의 차이는 정수형 인자의 처리 방법에 
 > for (let e of iterator) {
 > console.log(e);
 > }
-> <span style="color:gray">// [0, 'a']</span>
-> <span style="color:gray">// [1, 'b']</span>
-> <span style="color:gray">// [2, 'c']</span>
-> &nbsp
+> // [0, 'a']
+> // [1, 'b']
+> // [2, 'c']
+
 > var sites = ['siteA','siteB','siteC'];
 > sites_iterator = sites.entries();
-> <span style="color:gray">//Array Iterator {}</span>
+> //Array Iterator {}
 > console.log(sites_iterator.next())
 > console.log(sites_iterator.next())
 > console.log(sites_iterator.next())
 > console.log(sites_iterator.next())
-> <span style="color:gray">//{value: [ 0, "siteA" ], done: false}</span>
-> <span style="color:gray">//{value: [ 1, "siteB" ], done: false}</span>
-> <span style="color:gray">//{value: [ 2, "siteC" ], done: false}</span>
-> <span style="color:gray">//{value: undefined, done: true}</span>
+> //{value: [ 0, "siteA" ], done: false}
+> //{value: [ 1, "siteB" ], done: false}
+> //{value: [ 2, "siteC" ], done: false}
+> //{value: undefined, done: true}
 ```
 
 ---
@@ -210,12 +211,17 @@ every는 callback이 거짓을 반환하는 요소를 찾을 때까지 배열에
 > function isBigEnough(element, index, array) {
 > return element >= 10;
 > }
-> [12, 5, 8, 130, 44].every(isBigEnough); <span style="color:gray"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// false</span>
-> [12, 54, 18, 130, 44].every(isBigEnough); <span style="color:gray">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// true</span>
+> [12, 5, 8, 130, 44].every(isBigEnough); // false
+> [12, 54, 18, 130, 44].every(isBigEnough);// true
 ```
 
+<br>
+<br>
+<br>
 ---
 
-참고:생활코딩, MDN
-https://m.blog.naver.com/magnking/220966405605
-https://webisfree.com/2020-04-27/[%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8]-%EB%B0%B0%EC%97%B4-%EB%A9%94%EC%86%8C%EB%93%9C-entries()-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
+참고:
+생활코딩  
+MDN  
+[property란무엇인가](https://m.blog.naver.com/magnking/220966405605)  
+[배열메소드 entries알아보기](<https://webisfree.com/2020-04-27/[%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8]-%EB%B0%B0%EC%97%B4-%EB%A9%94%EC%86%8C%EB%93%9C-entries()-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0>)

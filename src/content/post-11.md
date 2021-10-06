@@ -1,6 +1,6 @@
 ---
 title: "Javascript Number Type"
-date: "2021-12-30"
+date: "2020-12-30"
 draft: false
 path: "/blog/post-11"
 ---
@@ -117,5 +117,5 @@ numObj.toFixed(6) // Returns '12345.678900': 빈 공간을 0으로 채웁니다.
 MDN  
 [컴퓨터사이언스 부트캠프 with 파이썬](https://thebook.io/006950/ch03/03/)  
 [위키피디아](https://ko.wikipedia.org/wiki/%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90)
-[10진수-2진수(hexadecimal-binary)](https://box0830.tistory.com/155)
+[10진수-2진수(hexadecimal-binary)](https://box0830.tistory.com/155)  
 [자바스크립트 소수점 계산 오류 가볍게 이해하기](https://bigtop.tistory.com/47)
