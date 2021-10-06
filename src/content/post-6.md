@@ -1,7 +1,7 @@
 ---
 title: "NFT만들기"
 date: "2021-09-23"
-draft: false
+draft: true
 path: "/blog/post-6"
 ---
 

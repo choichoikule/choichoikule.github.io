@@ -1,7 +1,7 @@
 ---
 title: "IP주소"
 date: "2021-09-30"
-draft: false
+draft: true
 path: "/blog/post-8"
 ---
 

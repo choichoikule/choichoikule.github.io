@@ -1,7 +1,7 @@
 ---
 title: "유저가 브라우저에 URL을 입력한 후 벌어지는 일들 -2"
 date: "2021-09-23"
-draft: false
+draft: true
 path: "/blog/post-7"
 ---
 
