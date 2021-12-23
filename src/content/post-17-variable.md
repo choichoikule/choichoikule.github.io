@@ -93,4 +93,5 @@ for (var i = 0; i < 5; i++) {
 이렇게 사용해도된다. 역시 클로저를 이용했다.
 
 참고:  
-(let과 const와 블록레벨 스코프)[https://poiemaweb.com/es6-block-scope]
+[let과 const와 블록레벨 스코프](https://poiemaweb.com/es6-block-scope)
+[반복문에서의 비동기함수](https://velog.io/@skawnkk/%EB%B0%98%EB%B3%B5%EB%AC%B8%EC%97%90%EC%84%9C%EC%9D%98-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%95%A8%EC%88%98-%EC%8B%A4%ED%96%89)

@@ -36,7 +36,7 @@ setTimeOut도 비동기 API중 하나로 호출스택에 바로 올라가지않�
 일반 태스크큐가 아닌 마이크로태스크큐에 담딘다. 마이크로태스크큐는 태스크큐보다 우선순위에 있기때문에 만약 setTimeout과 promise를 같이사용하면 프로미스에 등록한 콜백이 먼저 실행되게된다.
 계속 마이크로 태스크가 실행이되어 그냥 일반 태스크가 지연되는 경우가 있을 수 있으니 주의해야겠다!
 
-추가공부하고 싶은것: 운영체제의 자원할당과정
+추가공부하고 싶은것: 운영체제의 자원할당과정  
 참고:  
-(프로세스와 스레드)[https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html]  
-(이벤트루프)[https://meetup.toast.com/posts/89]
+[프로세스와 스레드(https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)  
+[이벤트루프](https://meetup.toast.com/posts/89)
