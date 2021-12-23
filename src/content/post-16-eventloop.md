@@ -38,5 +38,5 @@ setTimeOut도 비동기 API중 하나로 호출스택에 바로 올라가지않�
 
 추가공부하고 싶은것: 운영체제의 자원할당과정  
 참고:  
-[프로세스와 스레드(https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)  
+[프로세스와 스레드](https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)  
 [이벤트루프](https://meetup.toast.com/posts/89)
