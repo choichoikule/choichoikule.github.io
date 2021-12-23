@@ -1,7 +1,7 @@
 ---
 title: "변수와 클로저와 스코프"
 date: "2021-12-23"
-draft: true
+draft: false
 path: "/blog/variable"
 ---
 

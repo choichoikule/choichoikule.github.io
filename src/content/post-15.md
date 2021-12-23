@@ -1,7 +1,7 @@
 ---
 title: "Frontend Architecture with React-1"
 date: "2021-11-11"
-draft: false
+draft: true
 path: "/blog/frontendArchitecture"
 ---
 
