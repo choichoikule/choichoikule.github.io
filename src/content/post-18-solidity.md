@@ -1,6 +1,6 @@
 ---
 title: "[번역과 공부 그 사이 어딘가]Solidity-Layout of a Solidity Source File"
-date: "2021-12-23"
+date: "2022-01-26"
 draft: false
 path: "/blog/18"
 ---
@@ -37,7 +37,7 @@ pragma 지시어는 컴파일러 버전을 명시하는 것 이외에도 Applica
 > ABI는 컨트랙트 내의 함수를 호출하거나 컨트랙트로부터 데이터를 얻는 방법이다. 이더리움 스마트 컨트랙트는 이더리움 블록체인에 배포된 바이트코드다. 컨트랙트 내에 여러 개의 함수가 있을 수 있을 것이다. ABI는 컨트랙트 내의 어떤 함수를 호출할지를 지정하는데 필요하며, 우리가 생각했던 대로 함수가 데이터를 리턴한다는 것을 보장하기 위해 반드시 필요하다.
 abicoder v1과 v2의 차이점은 v2에서는 중첩된 배열과 구조체를 허용한다는 것이 다르다. 
 
-솔리디티는 모듈화를 지원하기 위해 import 구문을 사용하는데 자바스크립트와 같이 default export는 지원하지 않는다. ``` ipmort "filename"; ```와 같이 임포트해올경우 현재의 글로벌스코프에 포함되게 된다. 이경우 네임스페이스를 오염시킬 위험이 있으므로 특정심볼을 명시적으로 사용해서 다음과 같이 임포트해오는 것이 권장된다. ```import * as symbolName from "filename";```, ```import "filename" as symbolName;```, ```import {symbol1 as alias, symbol2} from "filename";```
+솔리디티는 모듈화를 지원하기 위해 import 구문을 사용하는데 default export는 지원하지 않는다. ``` ipmort "filename"; ```와 같이 임포트해올경우 현재의 글로벌스코프에 포함되게 된다. 이경우 네임스페이스를 오염시킬 위험이 있으므로 특정심볼을 명시적으로 사용해서 다음과 같이 임포트해오는 것이 권장된다. ```import * as symbolName from "filename";```, ```import "filename" as symbolName;```, ```import {symbol1 as alias, symbol2} from "filename";```
 솔리디티에서의 임포트 경로는 호스트의 파일시스템의 파일을 직접적으로 의미하지않는다. 솔리디티는 유니크한 소스 유닛 이름을 할당하여 virtual filesystem인 내부의 데이터베이스에 저장하고 import구문의 콜백으로 실제 파일을 찾아오는 식으로 작동한다. ```import "./util.sol"```와 같이 상대경로로 임포트해오는 방식을 사용할 수 있기도하다. ```./``` or ```../```로 시작해야한다.
 
  참고:  
