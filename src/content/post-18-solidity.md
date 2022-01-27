@@ -1,5 +1,5 @@
 ---
-title: "[번역과 공부 그 사이 어딘가]Solidity-Layout of a Solidity Source File"
+title: "solidity-1"
 date: "2022-01-26"
 draft: false
 path: "/blog/18"
@@ -7,7 +7,7 @@ path: "/blog/18"
 
 처음 공부하면서 정리한 내용으로 틀린부분이 있을 수 있습니다. 주의
 
-#### Storage Example
+Storage Example
 ```
 //SPDX-FileCopyrightText: © 2022 choichoikule email@gmail.com
 //SPDX-License-Identifier: GPL-3.0
